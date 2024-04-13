@@ -1,6 +1,16 @@
-import {configureStore} from '@reduxjs/toolkit';
-import {rootReducer} from './reducers';
+import {Reducer, configureStore} from '@reduxjs/toolkit';
+import {createReducer} from './reducers';
+import {RootStateKeyType} from './types';
 
-export const store = configureStore({
-  reducer: rootReducer,
+const store: any = configureStore({
+  reducer: createReducer(),
 });
+
+store.asyncReducers = {};
+
+export const injectReducer = (key: RootStateKeyType, reducer: Reducer) => {
+  store.asyncReducers[key] = reducer;
+  store.replaceReducer(createReducer(store.asyncReducers));
+};
+
+export default store;
