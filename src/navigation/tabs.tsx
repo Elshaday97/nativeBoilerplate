@@ -1,14 +1,20 @@
 import React from 'react';
-import HomeScreen from '@src/screens/home';
-import {TabRoute, TabRouteNamesEnum} from './types';
+import {TabScreenConfig, RouteNamesEnum} from './types';
+import {HomeScreenStack} from './stacks';
 
-export const tabRoutes: TabRoute[] = [
+export const tabScreens: TabScreenConfig[] = [
   {
-    name: TabRouteNamesEnum.Home,
-    component: <HomeScreen />,
+    name: RouteNamesEnum.HomeScreen,
+    component: <HomeScreenStack />,
+    options: {
+      tabBarLabel: 'Home',
+    },
   },
   {
-    name: TabRouteNamesEnum.Components,
+    name: RouteNamesEnum.Components,
     component: <></>,
+    options: {
+      tabBarLabel: 'Blocks',
+    },
   },
 ];

@@ -1,12 +1,19 @@
 import {BottomTabNavigationOptions} from '@react-navigation/bottom-tabs';
 
-export enum TabRouteNamesEnum {
+export enum RouteNamesEnum {
+  HomeScreen = 'HomeScreen',
   Home = 'Home',
   Components = 'Components',
 }
 
-export interface TabRoute {
-  name: TabRouteNamesEnum;
+export type ParamList = {
+  HomeScreen: object;
+  Home: object;
+  Components: undefined;
+};
+
+export interface TabScreenConfig {
+  name: RouteNamesEnum;
   component: React.JSX.Element;
   options?: BottomTabNavigationOptions;
   initialParams?: object;

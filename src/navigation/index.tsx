@@ -1,8 +1,9 @@
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {tabRoutes} from './tabs';
+import {tabScreens} from './tabs';
+import {ParamList} from './types';
 
-const Tab = createBottomTabNavigator();
+const Tab = createBottomTabNavigator<ParamList>();
 
 const MainNavigator = () => {
   return (
@@ -13,13 +14,16 @@ const MainNavigator = () => {
           fontSize: 15,
         },
       })}>
-      {tabRoutes.map(route => (
+      {tabScreens.map(screen => (
         <Tab.Screen
-          key={route.name}
-          name={route.name}
-          options={route.options}
-          initialParams={route.initialParams}>
-          {() => route.component}
+          key={screen.name}
+          name={screen.name}
+          options={{
+            ...screen.options,
+            headerShown: false,
+          }}
+          initialParams={screen.initialParams}>
+          {() => screen.component}
         </Tab.Screen>
       ))}
     </Tab.Navigator>
