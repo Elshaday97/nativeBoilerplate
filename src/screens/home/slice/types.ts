@@ -1,7 +1,4 @@
-export interface HomeScreenState {
-  data?: HomeScreenData;
-  isGettingData: boolean;
-}
+export interface HomeScreenState {}
 
 export interface HomeScreenData {
   test: string;

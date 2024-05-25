@@ -3,7 +3,9 @@ import {RootState} from '@src/store/types';
 
 const selectSlice = (state: RootState) => state?.homeScreen;
 
-export const selectHomeScreenData = createSelector(
+// Breakdown into individual selectors as needed
+
+export const selectHomeScreenState = createSelector(
   [selectSlice],
-  state => state?.data,
+  state => state,
 );

@@ -2,6 +2,7 @@ import {AnyAction, Reducer} from '@reduxjs/toolkit';
 import {HomeScreenState} from '@src/screens/home/slice/types';
 
 export interface RootState {
+  api?: any; // Fix
   homeScreen?: HomeScreenState;
 }
 

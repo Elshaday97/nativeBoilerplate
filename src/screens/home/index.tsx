@@ -4,7 +4,6 @@ import {HomeScreenNavigationProps, HomeScreenProps} from './types';
 import {Button, Text} from 'react-native-paper';
 import {Dimensions, StyleSheet, View} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
-// import {RouteNamesEnum} from '@src/navigation/types';
 
 const HomeScreen = ({}: HomeScreenProps) => {
   const {} = useHomeScreenSlice();
