@@ -4,6 +4,7 @@ import {HomeScreenNavigationProps, HomeScreenProps} from './types';
 import {Button, Text} from 'react-native-paper';
 import {Dimensions, StyleSheet, View} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
+import RightIcon from '@assets/icons/arrow-right.svg';
 
 const HomeScreen = ({}: HomeScreenProps) => {
   const {} = useHomeScreenSlice();
@@ -13,7 +14,7 @@ const HomeScreen = ({}: HomeScreenProps) => {
     <View style={styles.container}>
       <Text style={styles.label}>Home Page</Text>
       <Button
-        // icon="camera"
+        icon={RightIcon}
         mode="contained"
         onPress={() => navigation.navigate('Components')}>
         Show block components
