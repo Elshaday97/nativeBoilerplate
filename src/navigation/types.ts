@@ -1,17 +1,20 @@
 import {BottomTabNavigationOptions} from '@react-navigation/bottom-tabs';
 
 export enum RouteNamesEnum {
+  // Tabs
   HomeScreen = 'HomeScreen',
+  OtherScreen = 'OtherScreen',
+
+  // Other routes
   Home = 'Home',
-  Components = 'Components',
   LogIn = 'LogIn',
   SignUp = 'SignUp',
 }
 
 export type ParamList = {
   HomeScreen: object;
+  OtherScreen: undefined;
   Home: object;
-  Components: undefined;
   LogIn: undefined;
   SignUp: undefined;
 };

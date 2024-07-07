@@ -18,10 +18,7 @@ const AuthenticatedNavigator = () => {
         <Tab.Screen
           key={screen.name}
           name={screen.name}
-          options={{
-            ...screen.options,
-            headerShown: false,
-          }}
+          options={screen.options}
           initialParams={screen.initialParams}>
           {() => screen.component}
         </Tab.Screen>

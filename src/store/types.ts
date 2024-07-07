@@ -1,9 +1,11 @@
 import {AnyAction, Reducer} from '@reduxjs/toolkit';
+import {AuthState} from '@src/auth/types';
 import {HomeScreenState} from '@src/screens/home/slice/types';
 
 export interface RootState {
-  api?: any; // Fix
+  api?: any; // FIXME:
   homeScreen?: HomeScreenState;
+  auth?: AuthState;
 }
 
 type RequiredState = Required<RootState>;

@@ -1,4 +1,5 @@
 import {NavigationContainer} from '@react-navigation/native';
+import ErrorBoundary from '@src/components/ErrorBoundary';
 import MainNavigator from '@src/navigation';
 import store from '@src/store';
 import {theme} from '@src/theme';
@@ -11,7 +12,9 @@ function App(): React.JSX.Element {
     <NavigationContainer>
       <Provider store={store}>
         <PaperProvider theme={theme}>
-          <MainNavigator />
+          <ErrorBoundary>
+            <MainNavigator />
+          </ErrorBoundary>
         </PaperProvider>
       </Provider>
     </NavigationContainer>

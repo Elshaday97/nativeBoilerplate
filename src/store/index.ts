@@ -9,7 +9,6 @@ const isDevMode = NODE_ENV === 'development';
 
 const store: any = configureStore({
   reducer: createReducer(),
-
   middleware: getDefaultMiddleware =>
     [...getDefaultMiddleware(), rootApi.middleware, rtkQueryErrorLogger] as any, // help lol
   devTools: isDevMode,

@@ -8,13 +8,15 @@ export const tabScreens: TabScreenConfig[] = [
     component: <HomeScreenStack />,
     options: {
       tabBarLabel: 'Home',
+      headerShown: false,
     },
   },
   {
-    name: RouteNamesEnum.Components,
+    name: RouteNamesEnum.OtherScreen,
     component: <></>,
     options: {
-      tabBarLabel: 'Blocks',
+      tabBarLabel: 'Other Screen',
+      title: 'Other Screen',
     },
   },
 ];
